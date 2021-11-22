@@ -16,7 +16,7 @@
                         @enderror
                     </div>
         <div class="input m-3">
-            <label for="">fornecedor_id</label>
+            <label for="">IDfornecedor</label>
             <input type="number" class="form-control @error('fornecedor_id') is-invalid @enderror" name="fornecedor_id">
             @error('fornecedor_id')
                 <span class="invalid-feedback" role="alert">
