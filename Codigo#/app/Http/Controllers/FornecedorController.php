@@ -30,15 +30,7 @@ class FornecedorController extends Controller
         }
         return view('fornecedor.show', ['fornecedor'=>$fornecedor]);
     }
-    public function edit($id) {
-        $fornecedor = Fornecedor::find($id);
-        return view('fornecedores.edit', ['fornecedor' => $fornecedor]);
-    }
 
-    public function update(StoreFornecedorRequest $request, $id) {
-        Fornecedor::findOrFail($id)->update($request->all());
-        return redirect()->route('fornecedores.index');
-    }
 
     public function destroy($id) {
         Fornecedor::findOrFail($id)->delete();
