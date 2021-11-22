@@ -32,15 +32,7 @@ class ProdutoController extends Controller
         return view('produto.show', ['produto'=>$produto]);
     }
     
-    public function edit($id) {
-        $produto = Produto::find($id);
-        return view('produtos.edit', ['produto' => $produto]);
-    }
 
-    public function update(StoreProdutoRequest $request, $id) {
-        Produto::find($id)->update($request->all());
-        return redirect()->route('produtos.index');
-    }
 
     public function destroy($id) {
         Produto::find($id)->delete();
