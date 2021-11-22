@@ -40,13 +40,6 @@ class CompraController extends Controller
         return view('Compra.show', ['Compra'=>$compra]);
     }
 
-    public function edit($id) {
-        
-    }
-
-    public function update(Request $request, $id) {
-        
-    }
 
     public function destroy($id) {
         Compra::findOrFail($id)->delete($id);
